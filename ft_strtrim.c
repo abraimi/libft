@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 06:34:07 by abraimi           #+#    #+#             */
-/*   Updated: 2024/11/03 21:27:10 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/03 22:35:19 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 	size_t	end;
 	char	*ptr;
 
-	if (!s1 || !set)
-		return ((void *)0);
+	if (!set || !s1)
+		return (NULL);
 	if (!*set)
 		return (ft_strdup(s1));
 	start = 0;
@@ -44,14 +44,14 @@ char	*ft_strtrim(const char *s1, const char *set)
 	return (ptr);
 }
 
-int main()
-{
-	char str[] = "..a.Hello, World.a.........................................................";
-	char set[] = ".a";
-	char *s;
+// int main()
+// {
+// 	char str[] = "..a.Hello, World.a.........................................................";
+// 	char set[] = ".a";
+// 	char *s;
 
-	s = ft_strtrim(str, set);
-	printf("%s\n",s);
-	free(s);
-	return (0);
-}
+// 	s = ft_strtrim(str, set);
+// 	printf("%s\n",s);
+// 	free(s);
+// 	return (0);
+// }

@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 00:37:03 by abraimi           #+#    #+#             */
-/*   Updated: 2024/11/02 09:04:53 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/03 23:05:34 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,31 +16,24 @@
 static size_t	count_words(const char *s, char c);
 static size_t	count_chars(const char *s, char c, size_t start);
 static size_t	skip_word(const char *s, char c, size_t start);
-static char	*get_word(const char *s, char c, size_t start, size_t size);
+static char		*get_word(const char *s, char c, size_t start, size_t size);
 
 char	**ft_split(const char *s, char c)
 {
 	size_t	size;
 	size_t	idx;
 	size_t	word_len;
+	char	*sub;
 	char	**strs;
-
-	size = count_words(s, c);
-	strs = (char **)malloc(size + 1);
-	if (!strs)
+	char a[2];
+	a[0] = c;
+	a[1] = '\0';
+	strs = (char **)malloc(2);
+	sub = ft_strtrim(s, a);
+	if (!sub)
 		return (NULL);
-	idx = 0;
-	while (s[idx] != '\0')
-	{
-		if (s[idx] != c)
-		{
-			word_len = count_chars(s, c, idx);
-			*strs++ = get_word(s, c, idx, word_len);
-			idx = word_len;
-		}
-		idx++;
-	}
-	*strs = NULL;
+	strs[0] = sub;
+	strs[1] = NULL;
 	return (strs);
 }
 
@@ -52,7 +45,7 @@ static size_t	skip_word(const char *s, char c, size_t start)
 		s++;
 	}
 	return (start);
-// }
+}
 
 static char	*get_word(const char *s, char c, size_t start, size_t size)
 {
@@ -109,27 +102,29 @@ static size_t	count_words(const char *s, char c)
 	return (count);
 }
 
-// int main()
-// {
-// 	char str[] = ",,,,,,,,  He, l l,oW,or,ld        ";
-// 	char c = ',';
-// 	char *s;
+int main()
+{
+	char str[] = ",,,,,,,,  He, l l,oW,or,ld";
+	char c = ',';
+	char *s;
 
-// 	// size_t size = count_chars(str, c, 8);
-// 	// s = get_word(s, c, 8, size);
+	// size_t size = count_chars(str, c, 8);
+	// s = get_word(s, c, 8, size);
 
-// 	// printf("%lu\n", size);
-// 	// free(s);
+	// printf("%lu\n", size);
+	// free(s);
 
 
-// 	char **strs;
+	char **strs;
+	size_t idx;
 
-// 	strs = ft_split(str, c);
-// 	while (*strs != NULL)
-// 		printf("%s\n", *strs++);
+	strs = ft_split(str, c);
+	idx = 0;
+	while (strs[idx] != NULL)
+		printf("%s\n", strs[idx++]);
 
-// 	while (*strs != NULL)
-// 		free(*strs++);
-// 	free(strs);
-// 	return (0);
-// }
+	while (idx > 0)
+		free(strs[idx--]);
+	free(strs);
+	return (0);
+}
