@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 00:37:03 by abraimi           #+#    #+#             */
-/*   Updated: 2024/11/04 08:26:28 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/04 10:36:43 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,16 @@ char	**ft_split(const char *s, char c)
 	size_t	size;
 	char	**strs;
 
+	if (!s)
+		return(NULL);
+	if (!*s)
+	{
+		strs = (char **)malloc(sizeof(char *));
+		if (!strs)
+			return (NULL);
+		strs[0] = NULL;
+		return (strs);
+	}
 	size = count_words(s, c);
 	strs = (char **)malloc((size + 1) * sizeof(char *));
 	if (!strs)
@@ -111,29 +121,30 @@ static size_t	count_words(const char *s, char c)
 	return (count);
 }
 
-int main()
-{
-	char str[] = ",,,,,,,,  He, l l,oW,or,ld,,,,";
-	char c = ',';
-	// char *str = 0;
+// int main()
+// {
+// 	// char str[] = ",,,,,,,,  He, l l,oW,or,ld,,,,";
+// 	// char c = ',';
+// 	char *str = 0;
+// 	char c = 0;
 
-	// size_t size = count_chars(str, c, 8);
-	// s = get_word(s, c, 8, size);
+// 	// size_t size = count_chars(str, c, 8);
+// 	// s = get_word(s, c, 8, size);
 
-	// printf("%lu\n", size);
-	// free(s);
+// 	// printf("%lu\n", size);
+// 	// free(s);
 
-	char **strs;
-	size_t idx;
+// 	char **strs;
+// 	size_t idx;
 
-	strs = ft_split(str, c);
-	idx = 0;
-	printf("{");
-	while (strs[idx] != NULL)
-		printf("%s,", strs[idx++]);
-	printf("}");
+// 	strs = ft_split(str, c);
+// 	idx = 0;
+// 	printf("{");
+// 	while (strs[idx] != NULL)
+// 		printf("%s,", strs[idx++]);
+// 	printf("}");
 
-	freeback(strs, idx);
-	free(strs);
-	return (0);
-}
+// 	freeback(strs, idx);
+// 	free(strs);
+// 	return (0);
+// }

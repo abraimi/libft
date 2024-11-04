@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 03:48:20 by abraimi           #+#    #+#             */
-/*   Updated: 2024/11/02 13:10:07 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/04 10:46:37 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ char	*ft_strrchr(const char *s, int c)
 // 	// char *d1 = strrchr(src, 'a');
 // 	// char *d2 = ft_strrchr(src, 'a');
 
-// 	char *src = "abbbbbbbb";
-// 	char *d1 = strrchr(src, 'a');
-// 	char *d2 = ft_strrchr(src, 'a');
+// 	char *src = "teste";
+// 	char *d1 = strrchr(src,1024);
+// 	char *d2 = ft_strrchr(src,1024);
 
 // 	printf("O: %s\n", d1);
 // 	printf("M: %s\n", d2);

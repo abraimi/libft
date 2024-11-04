@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 06:34:07 by abraimi           #+#    #+#             */
-/*   Updated: 2024/11/04 01:18:03 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/04 09:13:10 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,10 @@ char	*ft_strtrim(const char *s1, const char *set)
 	size_t	end;
 	char	*ptr;
 
-	if (!set || !s1 || !*s1)
+	if (!set || !s1)
 		return (NULL);
+	if (!*s1)
+		return (ft_strdup(s1));
 	if (!*set)
 		return (ft_strdup(s1));
 	start = 0;
