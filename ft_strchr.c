@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 01:59:18 by abraimi           #+#    #+#             */
-/*   Updated: 2024/11/04 10:43:09 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/05 00:17:22 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,20 @@
 char	*ft_strchr(const char *s, int c)
 {
 	size_t	idx;
-	size_t	size;
+	char	ch;
+	char	*ps;
 
-	size = ft_strlen(s);
-	if (c == '\0')
-		return (&((char *)s)[size]);
+	ch = (char)c;
+	ps = (char *)s;
 	idx = 0;
-	while (s[idx] != '\0')
+	while (ps[idx] != '\0')
 	{
-		if (s[idx] == (char)c)
-			return (&((char *)s)[idx]);
+		if (ps[idx] == ch)
+			return (&(ps)[idx]);
 		idx++;
 	}
+	if (ch == '\0' && ps[idx] == '\0')
+		return (&(ps)[idx]);
 	return (NULL);
 }
 

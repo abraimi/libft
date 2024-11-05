@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 17:03:17 by abraimi           #+#    #+#             */
-/*   Updated: 2024/11/02 18:18:36 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/05 00:12:28 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_itoa(int n)
 
 static int	digits(int n)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (n < 0)

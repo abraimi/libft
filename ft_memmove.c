@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 00:30:20 by abraimi           #+#    #+#             */
-/*   Updated: 2024/11/02 13:01:12 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/05 00:31:15 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,23 +26,18 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		while (len > 0)
 		{
-			len--;
 			ptr_dst[len] = ptr_src[len];
+			len--;
 		}
-	}else
+	}
+	else
 	{
 		idx = 0;
-		while (idx < len)
-		{
+		while (idx++ < len)
 			ptr_dst[idx] = ptr_src[idx];
-			idx++;
-		}
 	}
 	return (dst);
 }
-
-#include <string.h>
-#include <stdio.h>
 
 // int main()
 // {
@@ -53,7 +48,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 // 	// char str2[] = "abcde";
 // 	// char *src2 = &str2[0];
 // 	// char *dst2 = &str2[2];
-
 
 // // printf("O: return: %s, dest: %s\n", memmove(dst1, src1, 3), dst1);
 
