@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 17:03:17 by abraimi           #+#    #+#             */
-/*   Updated: 2024/11/05 00:12:28 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/06 07:55:27 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@ static int	digits(int n);
 
 char	*ft_itoa(int n)
 {
-	int		size;
+	int		len;
 	int		idx;
 	char	*asc;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	size = digits(n);
-	if (size == 0 || n == 0)
+	len = digits(n);
+	if (len == 0 || n == 0)
 		return (ft_strdup("0"));
-	asc = (char *)malloc(size + 1);
+	asc = (char *)malloc(len + 1);
 	if (!asc)
 		return (NULL);
 	if (n < 0)
@@ -33,8 +33,8 @@ char	*ft_itoa(int n)
 		asc[0] = '-';
 		n *= -1;
 	}
-	asc[size] = '\0';
-	idx = size;
+	asc[len] = '\0';
+	idx = len;
 	while (idx > 0 && n > 0)
 	{
 		asc[--idx] = (n % 10) + 48;
@@ -60,25 +60,3 @@ static int	digits(int n)
 	}
 	return (count);
 }
-// #include <stdio.h>
-// #include <time.h>
-
-// int main()
-// {
-// 	// char *s;
-
-// 	// s = ft_itoa(-123456789);
-// 	// printf("%s", s);
-// 	// free(s);
-// 	// return (0);
-// 	srand(clock());
-// 	int n;
-// 	char *d;
-
-// 	for (int i = 0; i < 2000; i++)
-// 	{
-// 		n = rand();
-// 		d = ft_itoa(n);
-// 		printf("%s ", d);
-// 	}
-// }

@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 04:53:37 by abraimi           #+#    #+#             */
-/*   Updated: 2024/10/30 04:36:40 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/06 04:50:51 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,3 @@ void	ft_bzero(void *s, size_t n)
 		idx++;
 	}
 }
-
-// #include <stdio.h>
-// #include <strings.h>
-
-// int main()
-// {
-// 	char s1[] = "Hello, world!";
-// 	char s2[] = "Hello, world!";
-// 	bzero(s1, 13);
-// 	ft_bzero(s2, 13);
-// 	printf("O: %s\nM: %s\n", s1, s2);
-// }

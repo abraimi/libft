@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 22:04:24 by abraimi           #+#    #+#             */
-/*   Updated: 2024/10/27 22:18:38 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/06 04:53:54 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-
-// #include <ctype.h>
-// #include <stdio.h>
-
-// int main()
-// {
-// 	printf("O: %i\n", isdigit(2147483647));
-// 	printf("M: %i\n", ft_isdigit(2147483647));
-// }

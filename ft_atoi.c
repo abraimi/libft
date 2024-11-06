@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 23:51:21 by abraimi           #+#    #+#             */
-/*   Updated: 2024/11/02 17:02:33 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/06 04:50:24 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	ft_isspace(char c)
 
 int	ft_atoi(const char *str)
 {
-	unsigned long long	result;
+	int					result;
 	size_t				idx;
 	int					sign;
 
@@ -41,20 +41,5 @@ int	ft_atoi(const char *str)
 		result = (result * 10) + (str[idx] - 48);
 		idx++;
 	}
-	if (result > 9223372036854775807 && sign < 0)
-		return (-1);
 	return (result * sign);
 }
-
-// #include <stdio.h>
-// #include <stdlib.h>
-// int main()
-// {
-// 	// char str[] = "  			21474836492222515151517a5";
-// 	char *n = "9223372036854775808";
-// 	int i1 = atoi(n);
-// 	int i2 = ft_atoi(n);
-
-// 	printf("O: %d\n", i1);
-// 	printf("M: %d\n", i2);
-// }
