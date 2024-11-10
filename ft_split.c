@@ -6,36 +6,31 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 04:22:31 by abraimi           #+#    #+#             */
-/*   Updated: 2024/11/06 07:07:55 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/10 23:50:12 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-static size_t	count_words(const char *s, char c)
-{
-	size_t	count;
-	int		flag;
 
-	if (!s || !*s)
+static size_t	count_words(const char *str, char sep)
+{
+	size_t	len;
+
+	if (!str)
 		return (0);
-	count = 0;
-	flag = 1;
-	while (*s == c)
-		s++;
-	while (*s != '\0')
+	len = 0;
+	while (*str != '\0')
 	{
-		if (*s != c)
-			flag = 1;
-		if ((*s == c || *(s + 1) == '\0') && flag)
-		{
-			flag = 0;
-			count++;
-		}
-		s++;
+		while (*str && *str == sep)
+			str++;
+		if (*str)
+			len++;
+		while (*str && *str != sep)
+			str++;
 	}
-	return (count);
+	return (len);
 }
 
 static void	*freeback(char **strs, size_t idx)
@@ -106,10 +101,8 @@ char	**ft_split(const char *s, char c)
 
 // int main()
 // {
-//     char *str = 0;
-//     // char c = 32;
-// 	// char str[] = "";
-// 	char c = 0;
+//     char c = 32;
+// 	char str[] = "a a a   a  a ";
 //     char **strs;
 //     size_t idx = 0;
 
