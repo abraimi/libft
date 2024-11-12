@@ -1,4 +1,5 @@
 # compile.sh
-# main.c
-# a.out
-# .DS_Store
+ main.c
+ a.out
+ .DS_Store
+ *.o
