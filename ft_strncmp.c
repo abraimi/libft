@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 04:05:50 by abraimi           #+#    #+#             */
-/*   Updated: 2024/11/02 16:49:43 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/11 22:51:51 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,23 +29,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-
-// int main()
-// {
-// 	// char	s1[] = "zzc";
-// 	// // char	s2[] = "abcd";
-// 	// size_t cmp = 1;
-// 	// char *s1 = "";
-// 	// char *s2 = "AAAAAA";
-// 	// size_t size = 6;
-
-// 	char *s1 = "abcdef";
-// 	char *s2 = "abcdefghijklmnop";
-// 	size_t size = 6;
-
-// 	printf("O: %i\n", strncmp(s1, s2, size));
-// 	printf("M: %i\n", ft_strncmp(s1, s2, size));
-// }

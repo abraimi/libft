@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 01:59:18 by abraimi           #+#    #+#             */
-/*   Updated: 2024/11/05 00:17:22 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/11 22:50:58 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,3 @@ char	*ft_strchr(const char *s, int c)
 		return (&(ps)[idx]);
 	return (NULL);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-
-// int main()
-// {
-// 	char *src = "teste";
-// 	char *d1 = strchr(src, 1024);
-// 	char *d2 = ft_strchr(src, 1024);
-// 	printf("O: %s\n", d1);
-// 	printf("M: %s\n", d2);
-
-// }

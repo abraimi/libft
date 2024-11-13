@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 05:36:57 by abraimi           #+#    #+#             */
-/*   Updated: 2024/11/01 08:15:57 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/11 22:51:30 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	return (dst_len + src_len);
 }
-// #include <stdio.h>
-// #include <string.h>
-
-// int main()
-// {
-// 	char *str1 = "ss";
-// 	char *str2 = "World";
-// 	printf("O: %lu, %s\n", strlcat(str2, str1, 4), str2);
-
-// 	char *str3 = "ss";
-// 	char *str4 = "World";
-// 	printf("M: %lu, %s\n", ft_strlcat(str4, str3, 4), str4);
-// }

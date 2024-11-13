@@ -6,12 +6,11 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 06:34:07 by abraimi           #+#    #+#             */
-/*   Updated: 2024/11/04 09:13:10 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/11 22:55:52 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	trimchr(const char *set, int c)
 {
@@ -45,15 +44,3 @@ char	*ft_strtrim(const char *s1, const char *set)
 	ptr = ft_substr(s1, start, (end - start) + 1);
 	return (ptr);
 }
-
-// int main()
-// {
-// 	char str[] = ".a.a.a.a.aHello.a.a.a.";
-// 	char set[] = "a.";
-// 	char *s;
-
-// 	s = ft_strtrim(str, set);
-// 	printf("%s\n",s);
-// 	free(s);
-// 	return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 06:02:23 by abraimi           #+#    #+#             */
-/*   Updated: 2024/10/30 06:33:26 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/11 22:51:25 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,3 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	ptr[idx] = '\0';
 	return (ptr);
 }
-
-// #include <stdio.h>
-
-// int main()
-// {
-// 	char	s1[] = "Hello";
-// 	char	s2[] = ", World!";
-// 	char	*str;
-
-// 	str = ft_strjoin(s1, s2);
-// 	printf("%s\n", str);
-// 	free(str);
-// 	return (0);
-// }

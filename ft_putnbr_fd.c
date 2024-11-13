@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 07:34:08 by abraimi           #+#    #+#             */
-/*   Updated: 2024/11/01 08:16:32 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/13 04:58:15 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,3 @@ void	ft_putnbr_fd(int n, int fd)
 		}
 	}
 }
-
-// int main()
-// {
-// 	int fd;
-
-// 	fd = open("test.txt", O_WRONLY);
-
-// 	ft_putnbr_fd(-2147483648, fd);
-// 	return (0);
-// }

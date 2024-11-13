@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 07:06:46 by abraimi           #+#    #+#             */
-/*   Updated: 2024/11/04 01:18:28 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/11 22:50:26 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,3 @@ void	ft_putstr_fd(char *s, int fd)
 	while (*s != '\0')
 		ft_putchar_fd(*s++, fd);
 }
-
-// int main()
-// {
-// 	int fd;
-
-// 	fd = open("/dev/ttys004", O_WRONLY);
-// 	ft_putstr_fd("\nHello, world!", fd);
-// 	close(fd);
-// 	return (0);
-// }

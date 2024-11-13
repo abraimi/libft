@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 05:27:26 by abraimi           #+#    #+#             */
-/*   Updated: 2024/11/02 09:37:08 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/11 22:51:35 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	*dst = '\0';
 	return (srcsize);
 }
-
-// #include <string.h>
-// #include <stdio.h>
-
-// int main()
-// {
-// 	char *s1 = "Hello, World!";
-// 	char *s1_dst = "";
-// 	printf("O: %lu, %s\n", strlcpy(s1_dst, s1, 100), s1_dst);
-
-// 	// char *s2 = "Hello, World!";
-// 	// char *s2_dst = "";
-// 	// printf("M: %lu, %s\n", ft_strlcpy(s2_dst, s2, 100), s2_dst);
-// }

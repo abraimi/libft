@@ -6,7 +6,7 @@
 /*   By: abraimi <abraimi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 07:11:21 by abraimi           #+#    #+#             */
-/*   Updated: 2024/11/01 07:30:28 by abraimi          ###   ########.fr       */
+/*   Updated: 2024/11/11 22:50:18 by abraimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,3 @@ void	ft_putendl_fd(char *s, int fd)
 		ft_putchar_fd('\n', fd);
 	}
 }
-
-// int main()
-// {
-// 	int fd;
-
-// 	fd = open("test.txt", O_WRONLY);
-// 	ft_putendl_fd("Hello, World!", fd);
-// 	return (0);
-// }
