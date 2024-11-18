@@ -13,21 +13,23 @@ SOURCES = \
 	ft_calloc.c		ft_strdup.c		ft_putchar_fd.c \
 	ft_putstr_fd.c	ft_split.c
 
-OBJECTS = $(SOURCES:.c=.o)
-CC = cc
-CFLAGS = -Wall -Wextra -Werror
-AR = ar
+BUILDDIR = build
+OBJECTS = $(addprefix $(BUILDDIR)/, $(SOURCES:.c=.o))
 
-all: $(NAME)
+all: $(BUILDDIR) $(NAME)
+
+$(BUILDDIR):
+	mkdir -p $(BUILDDIR)
 
 $(NAME): $(OBJECTS)
-	$(AR) -rsc $(NAME) $?
+	$(AR) -rsc $(NAME) $(OBJECTS)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $?
+$(BUILDDIR)/%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJECTS)
+	rm -rf $(BUILDDIR)
 
 fclean: clean
 	rm -f $(NAME)
